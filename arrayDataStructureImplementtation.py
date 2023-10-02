@@ -46,11 +46,27 @@ print(arr1)            ## Ans [1, 2, 3, 4, 4, 5, 6, 7, 9, 10]
 
 
 
-## to Extract the index of any given element ----------------------------------------------------
+## To Extract the index of any given element ----------------------------------------------------
 ## arr.index(element)
 
-print(arr.index(1))
+
+(arr.index(1))
 
     ## Ans element 1 index number is 0
 
 
+
+## To extent the orginal array ------------------------------------------------------------------
+## arr.extend([element])
+
+arr.extend([10,20,30,40,50])
+print(arr)              ## Ans [1, 2, 3, 4, 5, 6, 7, 9, 10, 10, 20, 30, 40, 50]
+
+
+
+
+## To Reveres the whole array -------------------------------------------------------------------
+
+arr.reverse()
+arr1.reverse()
+print(arr , arr1)
