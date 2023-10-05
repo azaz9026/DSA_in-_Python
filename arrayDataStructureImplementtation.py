@@ -69,4 +69,5 @@ print(arr)              ## Ans [1, 2, 3, 4, 5, 6, 7, 9, 10, 10, 20, 30, 40, 50]
 
 arr.reverse()
 arr1.reverse()
-print(arr , arr1)
+print(arr)
+print(arr1)
