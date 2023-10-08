@@ -9,7 +9,7 @@ print(arr[4])      ## Ans 5
 ## Insert an element 5 at index 2 -------------------------------------------------------
 ## arr.insert(index , element)
 
-arr.insert(2 , 5)
+arr.insert(2 , 6)
 print(arr)            ## Ans [1, 2, 5, 3, 4, 5, 6, 7, 8, 9, 10] 
 
 
