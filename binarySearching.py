@@ -22,27 +22,3 @@ i = 0
 j = len(arr)-1
 result = BinarySearch(arr , i , j , x )
 print(result)
-
-
-## 2 Binary Search -----------------------------------------------------------------------------------------
-
-
-def Binary(arr1 , i , j , x):
-    while i <= j:
-        mids = i+(j - i)//2
-        if arr1[mids]==x:
-            return mids
-        elif arr1[mids]<x:
-            i = mids + 1
-        else:
-            j = mids - 1
-    return -1
-
-
-arr1 = [1,2,3,4,5,6,7,8,9]
-x = 5
-i = 0
-j = len(arr1)-1
-results = Binary(arr1 , i , j , x )
-print(results)
-

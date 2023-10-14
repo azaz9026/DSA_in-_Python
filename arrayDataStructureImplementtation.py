@@ -2,15 +2,15 @@
 
 arr = [1,2,3,4,5,6,7,8,9,10]
 
-print(arr[4])          ## Ans 5
+print(arr[4])      ## Ans 5
 
 
 
 ## Insert an element 5 at index 2 -------------------------------------------------------
 ## arr.insert(index , element)
 
-arr.insert(2 , 5)
-print(arr)             ## Ans [1, 2, 5, 3, 4, 5, 6, 7, 8, 9, 10] 
+arr.insert(2 , 6)
+print(arr)            ## Ans [1, 2, 5, 3, 4, 5, 6, 7, 8, 9, 10] 
 
 
 
@@ -69,4 +69,5 @@ print(arr)              ## Ans [1, 2, 3, 4, 5, 6, 7, 9, 10, 10, 20, 30, 40, 50]
 
 arr.reverse()
 arr1.reverse()
-print(arr , arr1)
+print(arr)
+print(arr1)
