@@ -27,3 +27,27 @@ print(result)
 ## Ans to be [19, 27, 29, 38, 45, 50, 79]
 
 ## Time Complexity :- O(n^2) 
+
+
+## Selection Sort (2) -------------------------------------------------------------------------------
+
+
+## Function Definition
+def selectionSort2 (arr2):
+    for i in range(len(arr2)):
+        min_ele = i
+        for j in range(i+1 , len(arr2)):
+            if arr2[j] < arr2[min_ele]:
+                min_ele = j
+        arr2[i] , arr2[min_ele] = arr2[min_ele] , arr2[i]
+    return arr2
+
+
+
+## Driver code
+arr2 = [10,90,40,80,70,70,80,100]
+
+## Function Calling
+res = selectionSort2(arr2)
+print(res)
+
