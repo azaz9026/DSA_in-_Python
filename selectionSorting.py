@@ -52,5 +52,4 @@ arr2 = [10,90,40,80,70,70,80,100]
 res = selectionSort2(arr2)
 print(res)
 
-=======
->>>>>>> ce5f00515c102587da708535b89b4b7db094b4bd
+
