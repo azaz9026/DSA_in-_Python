@@ -42,10 +42,40 @@ def BinarySearch(arr , i , j , x):
 
 
 arr = [10,20,30,40,50,60,70,80,90,100]
-x = 100
+x = 1000
 i = 0
 j = len(arr)-1
 
 result = BinarySearch(arr , i , j , x )
+
+print(result)
+
+
+
+## Ternay Search -----------------------------------------------------------------------------------------------------------
+
+def ternaySearch(arr , i , j , x):
+    while i<=j:
+        mid_1 = i+(j-i)//3
+        mid_2 = i-(i-j)//3
+
+        if arr[mid_1] == x:
+            return mid_1
+        elif arr[mid_2] == x:
+            return mid_2
+        elif arr[mid_1] > x:
+            j = mid_1 - 1
+        elif arr[mid_2] < x:
+            i = mid_2 + 1
+        else:
+            mid_1+1 , mid_2-1
+    return -1
+
+arr = [10,20,30,40,50,60,70,80,90,100]
+x = 1000
+i = 0
+j = len(arr)-1
+
+result = ternaySearch(arr , i , j , x )
 
 print(result)
