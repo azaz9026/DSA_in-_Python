@@ -11,24 +11,41 @@ x = 200
 res  = linearSearch(arr , x)
 print(res)
 
+
+
 ## binary Search -----------------------------------------------------------------------------------------------------------
 
 
-def binarySearch(arr1 , l , r , y):
-    while l < r :
-        mid = l+(r-l)//2
-        if arr1[mid] == y:
-            return mid
-        elif arr1[mid] > y:
-            binarySearch(arr1 , y , mid-1 , l)
+## In a Sorted Array 
+
+
+
+def BinarySearch(arr , i , j , x):
+
+    while i <= j:
+
+        midpoint = i+(j-i)//2
+
+        if arr[midpoint]==x:
+            return midpoint
+
+        elif arr[midpoint]<x:
+
+            return BinarySearch(arr , midpoint+1 , j , x)
+
         else:
-            binarySearch(arr1 , y , mid+1 , r)
+
+            return BinarySearch(arr , i , midpoint-1 , x)
     return -1
+               
 
 
-arr1 = [10 , 20 , 30 , 50 , 40 , 5]
-y = 5
-l = 0
-r = len(arr1)-1
-res1  = binarySearch(arr1 , l , r , y)
-print(res1)
+
+arr = [10,20,30,40,50,60,70,80,90,100]
+x = 100
+i = 0
+j = len(arr)-1
+
+result = BinarySearch(arr , i , j , x )
+
+print(result)
