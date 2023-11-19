@@ -7,7 +7,7 @@ def linearSearch(arr , x):
     return -1
 
 arr  = [10 , 20 , 30 , 50 , 40 , 5]
-x = 20
+x = 200
 res  = linearSearch(arr , x)
 print(res)
 
@@ -17,9 +17,9 @@ print(res)
 def binarySearch(arr1 , l , r , y):
     while l < r :
         mid = l+(r-l)//2
-        if arr[mid] == y:
+        if arr1[mid] == y:
             return mid
-        elif arr[mid] > y:
+        elif arr1[mid] > y:
             binarySearch(arr1 , y , mid-1 , l)
         else:
             binarySearch(arr1 , y , mid+1 , r)
