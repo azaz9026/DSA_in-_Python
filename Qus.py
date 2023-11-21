@@ -2,26 +2,24 @@
 
 ## function Definition
 
-def findMaxProfit(prices):
-    min_Prices = float('inf')
+def findMaxProfit(price):
+    min_price = float('inf')
     max_profit = 0
 
-    for i in range (len(prices)):
-        if prices[i] < min_Prices:
-            min_Prices = prices[i]
-        elif prices[i] - min_Prices > max_profit:
-            max_profit = prices[i] - min_Prices
+    for i in range(len(price)):
+        if price[i] < min_price:
+            min_price = price[i]
+        elif price[i] - min_price > max_profit:
+            max_profit = price[i] - min_price
     return max_profit
 
 
-prices = [7,1,5,3,6,4,15]
+price = [7,1,5,8,9,3,4,10]
+maxProfit = findMaxProfit(price)
 
-## Function Calling 
+print(maxProfit)
 
-result = findMaxProfit(prices)
-print(" the max_ profit is to be this one " , result)
-
-## the Ans Should be 14 ---------------------->  the max_ profit is to be this one  14
+## the Ans Should be 14 ---------------------->  the max_ profit is to be this one  9
 ## Time Complexity O(n)
 ## Space Complexity O(1)
 
@@ -44,8 +42,8 @@ def collinearPoint(x1 , x2 , x3 , y1 , y2 , y3):
 x1 , x2 , x3 , y1 , y2 , y3 = 1 , 1 , 1 , 6 , 0 , 9
 
 ## Function Calling 
-collinearPoint(x1 , x2 , x3 , y1 , y2 , y3)
-
+res1 = collinearPoint(x1 , x2 , x3 , y1 , y2 , y3)
+print(res1)
 ## the Ans Should be  ---------------------->  The given point are Collinear.
 ## Time Complexity O(1)
 ## Space Complexity O(1)
@@ -88,35 +86,70 @@ collinearPoint2(x1,x2,x3,y1,y2,y3)
 ## /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
-## (Qus :- 4)  Collinear point other method 
+## (Qus :- 4)  Majority Element 
+
+## Function Deffinition
+from collections import Counter
+
+def majorityElement(nums):
+    counts = Counter(nums)
+    print(counts)
+    return max(counts.keys() , key = counts.get)
+
+
+
+nums  =  [1,1,1,1,2,2,2,1,1,2,2]
+result = majorityElement(nums)
+print(result)
+
+
+
+
+## (Qus :- 5)  Collinear point other method 
 
 
 ## Function Deffinition
 
-def sortColor(num):
-    p0 = 0 
+def colorSort(num):
+    p0 = curr = 0
     p2 = len(num)-1
-    curr = 0
     while curr <= p2:
         if num[curr] == 0:
-            # Swap num(curr) and num(p0)
-            num[curr] , num[p0] = num[p0] , num[curr]
-            curr += 1
+            num[p0] , num[curr] = num[curr] , num[p0]
             p0 += 1
+            curr += 1
         elif num[curr] == 2:
-            # Swap num(curr) and num(p2)
-            num[curr] , num[p2] = num[p2] , num[curr]
+            num[p2] , num[curr] = num[curr] , num[p2]
             p2 -= 1
         else:
-            curr += 1 
+            curr += 1
     return num
-    
 
 
-## Driver Code
-num = [2,0,2,1,1,0]
-color = sortColor(num)
-print(color)
+num = [2,0,2,0,1,1]
+result = colorSort(num)
+print(result)
+
+
+### //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+## by Bubble Sort
+
+def colorSort2(num2):
+    n = len(num2)
+    for i in range(n):
+        for j in range(n-i-1):
+            if num2[j] > num2[j+1]:
+                num2[j] , num2[j+1] =  num2[j+1] , num2[j]
+    return num2
+
+
+
+
+num2 = [2,0,2,0,1,1]
+result = colorSort2(num2)
+print(result)
+
+
 
 ## the Ans Should be  ---------------------->  [0, 0, 1, 1, 2, 2] all color are sorted.
 ## Time Complexity O(n)
