@@ -8,7 +8,7 @@
 def helper(n):
     if n <= 1:
         return n
-    return count(n-1) + count(n-2)
+    return helper(n-1) + helper(n-2)
 
 
 def count(s):
