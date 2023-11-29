@@ -1,8 +1,8 @@
-# Binary Search--------------------------
+# Binary Search Recursion --------------------------
 
 
 def BinarySearch(arr , i , j , x):
-    if arr[i] == x:
+    if arr[i] == x: 
         return i
     else:
         mid = i + (j-i) // 2
