@@ -26,3 +26,7 @@ n = len(arr)
 
 result = max_min(arr, n)
 print(result)
+
+
+
+

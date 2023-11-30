@@ -37,6 +37,9 @@ print(result)
 
 
 
+
+
+
 def max_profit(prices , n):
     min_p = prices[0]
     profit_1 = 0
