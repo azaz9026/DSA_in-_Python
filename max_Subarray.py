@@ -59,3 +59,7 @@ def three_sum(nums):
 nums = [-1, 0, 1, 2, -1, -4]
 output = three_sum(nums)
 print(output)  # Output: [[-1, -1, 2], [-1, 0, 1]]
+
+
+
+
