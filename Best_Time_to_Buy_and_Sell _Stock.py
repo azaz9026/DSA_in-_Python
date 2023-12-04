@@ -33,7 +33,7 @@ prices = [7, 1, 5, 3, 6, 4]
 n = len(prices)
 
 result = max_profit(prices, n)
-print(result) 
+print(result)
 
 
 # Second method --------------------------------------------------------------------------
