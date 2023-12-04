@@ -23,43 +23,30 @@ result = maxSubArray(arr, n)
 print(result)
 
 
-def three_sum(nums):
-    nums.sort()
-    result = []
+# Second method --------------------------------------------------------------------------
 
-    for i in range(len(nums) - 2):
-        # Skip duplicates
-        if i > 0 and nums[i] == nums[i - 1]:
-            continue
 
-        left, right = i + 1, len(nums) - 1
+def maxSubArray(nums):
 
-        while left < right:
-            current_sum = nums[i] + nums[left] + nums[right]
+    if len(nums) == 0:
+        return 0
+        
+    max_so = nums[0]
+    min_so = nums[0]
+    result = max_so
 
-            if current_sum == 0:
-                result.append([nums[i], nums[left], nums[right]])
+    for i in range( 1 , len(nums)):
+        curr = nums[i]
+        temp = max(curr , max(curr*max_so , curr*min_so))
+        min_so = min(curr , min(curr*max_so , curr*min_so))
 
-                # Skip duplicates
-                while left < right and nums[left] == nums[left + 1]:
-                    left += 1
-                while left < right and nums[right] == nums[right - 1]:
-                    right -= 1
+        max_so = temp
 
-                left += 1
-                right -= 1
-            elif current_sum < 0:
-                left += 1
-            else:
-                right -= 1
-
+        result = max( max_so , result )
+    
     return result
 
-# Example
-nums = [-1, 0, 1, 2, -1, -4]
-output = three_sum(nums)
-print(output)  # Output: [[-1, -1, 2], [-1, 0, 1]]
+nums = [2,3,-2,4]
 
-
-
-
+result = maxSubArray(nums)
+print(result)
