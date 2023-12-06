@@ -21,6 +21,8 @@ Str = "Azaz khan"
 result = reverseString(Str)
 print(result)
 
+## Ans => nahk zazA
+## Time complexit => O(n)
 
 
 ## another Method-----------------------------------------------------------------------------------------------------------------------
@@ -47,3 +49,20 @@ def reverseString(s):
 Str = "Azaz khan"
 result = reverseString(Str)
 print(result)
+
+## Ans => nahk zazA
+## Time complexit => O(n)
+
+## another Method-----------------------------------------------------------------------------------------------------------------------
+
+
+
+def reverse_whole_string(s):
+    return s[::-1]
+
+# Example
+my_string = "Hello, World!"
+reversed_string = reverse_whole_string(my_string)
+print("Reversed string:", reversed_string)
+
+## Ans => nahk zazA
