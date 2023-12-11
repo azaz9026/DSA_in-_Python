@@ -39,3 +39,9 @@ print(f"The sum of the digits of {number_to_sum} is: {result}")
 
 
 # Ans -> The sum of the digits of 12345 is: 15
+
+
+
+
+
+
