@@ -12,6 +12,7 @@ number_to_add = 12345
 result = add_digits(number_to_add)
 print(f"The single-digit result of adding the digits of {number_to_add} is: {result}")
 
+## Ans -> The single-digit result of adding the digits of 12345 is: 6
 
 
 ## Another Method----------------------------------------------------------------------------------------------------------------------------------------
@@ -30,6 +31,8 @@ number_to_add = 12345
 result = add_digits_math(number_to_add)
 print(f"The single-digit result of adding the digits of {number_to_add} is: {result}")
 
+## Ans -> The single-digit result of adding the digits of 12345 is: 6
+
 
 ## Another Method----------------------------------------------------------------------------------------------------------------------------------------
 
@@ -44,3 +47,5 @@ def add_digits_recursive(n):
 number_to_add = 12345
 result = add_digits_recursive(number_to_add)
 print(f"The single-digit result of adding the digits of {number_to_add} is: {result}")
+
+## Ans -> The single-digit result of adding the digits of 12345 is: 6
