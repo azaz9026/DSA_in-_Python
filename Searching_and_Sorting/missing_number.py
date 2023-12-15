@@ -32,7 +32,10 @@ result = find_missing_number(arr)
 print(result)
 
 
+
+
 ## another method --------------------------------------------------------------------------------------------------------------------------------------------------------
+
 
 def find_missing_number(arr):
     sorted_arr = sorted(arr)  # Use sorted() to create a sorted copy
@@ -49,3 +52,24 @@ result = find_missing_number(arr)
 print(result)
 
 
+
+
+## another method --------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+def find_missing_number_sorted(arr):
+    n = len(arr)
+    
+    for i in range(1, n):
+        if arr[i] != arr[i - 1] + 1:
+            return arr[i - 1] + 1
+
+    # If no missing number found in the loop, the missing number is at the end
+    return arr[-1] + 1
+
+# Example usage:
+arr = [1, 2, 3, 4, 6, 7, 8]
+result = find_missing_number_sorted(arr)
+print(result)
