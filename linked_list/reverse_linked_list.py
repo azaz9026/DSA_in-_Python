@@ -48,3 +48,10 @@ print("None")
 
 ## Ans -> Reversed Linked List:
 ## 4 -> 3 -> 2 -> 1 -> None
+
+
+
+
+
+
+
