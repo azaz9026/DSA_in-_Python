@@ -11,7 +11,7 @@ def BalancedString(s):
             r -= 1
         
         if r == 0:
-            count += 1 
+            count += 1
 
     return count
 
