@@ -8,7 +8,6 @@ class ListNode:
 
 def is_palindrome(head):
     values = []
-
     # Step 1: Traverse the linked list and store values in an array
     current = head
     while current:
